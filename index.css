@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #410358, #4700bc);
+}
+
+.pagination {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #383838;
+    padding: 10px 40px;
+    border-radius: 0 0 6px 6px;
+    max-width: 699px;
+    width: 100%;
+}
+
+.scroll {
+    width: 390px;
+    overflow: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    height: 3px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Scrollbarning orqa fon rangi */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbarning ushlash qismining rangi */
+    border-radius: 10px; /* Scrollbarning uchlari yumshoq bo'lishi uchun */
+}
+  
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Hover qilinganda Scrollbar rangini o'zgartirish */
+}
+
+ul {
+    margin: 20px 0;
+    display: inline-flex;
+    justify-content: center;
+    min-width: 390px;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    /* background-color: #ccc; */
+    min-width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 45px;
+    cursor: pointer;
+    list-style: none;
+    background-position: 0 -45px;
+    transition: all 0.5s;
+}
+
+ul li:hover {
+    background-color: #ccc;
+}
+
+ul li.active {
+    color: #fff;
+    background-image: linear-gradient(#ff4568, #ff4568);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.prevBtn, .nextBtn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    color: #383838;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.prevBtn img {
+    width: 24px;
+    margin-right: 15px;
+    transform: rotate(180deg);
+}
+
+.nextBtn img {
+    width: 24px;
+    margin-left: 15px;
+}
+
+#userList {
+    max-width: 699px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 6px 6px 0 0;
+    padding: 10px 40px;
+}
+
+.userItems {
+    padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .scroll::-webkit-scrollbar {
+        height: 0;
+    }
+
+    #userList, .pagination {
+        padding: 10px;
+    }
+
+    .pagination {
+        padding: 0 15px;
+    }
+
+    .prevBtn img, .nextBtn img {
+        width: 20px;
+    }
+
+    .prevBtn img {
+        margin-right: 5px;
+    }
+
+    .nextBtn img {
+        margin-left: 5px;
+    }
+}
